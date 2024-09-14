@@ -1,7 +1,7 @@
 
 
 name: libpcl
-parent: base
+parent: eigen
 
 profile:
 - name: base

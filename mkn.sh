@@ -5,8 +5,8 @@ CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" && cd $CWD
 (
     cd $CWD
 
+    mkn
     MKN_REPO=$(mkn -G MKN_REPO)
-
     rm -rf build && mkdir build && cd build
     cmake -G Ninja -DCMAKE_BUILD_TYPE=Release \
                    -DEigen3_DIR="${MKN_REPO}/math/eigen/master/share/eigen3/cmake" \
