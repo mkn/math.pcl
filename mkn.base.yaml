@@ -1,0 +1,4 @@
+
+name: libpcl.base
+dep: org.boost math.eigen
+sub: pcl&p(https://github.com/PointCloudLibrary/pcl)
