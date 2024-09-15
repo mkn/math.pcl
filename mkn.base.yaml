@@ -1,0 +1,9 @@
+
+name: libpcl.base
+
+property:
+    pcl.deps: org.boost math.eigen math.flann
+    pcl.subs: pcl&p(https://github.com/PointCloudLibrary/pcl)
+
+dep: ${pcl.deps}
+sub: ${pcl.subs}
