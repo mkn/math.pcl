@@ -1,10 +1,10 @@
 
 name: libpcl
 parent: base
-
+super: mkn.base.yaml
 profile:
 - name: base
   inc: include
   path: lib
-  dep: org.boost math.eigen
-  sub: pcl&p(https://github.com/PointCloudLibrary/pcl)
+  dep: ${pcl.deps}
+  sub: ${pcl.subs}
