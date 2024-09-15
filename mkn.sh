@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -exu
-CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" && cd $CWD
+CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 (
     cd $CWD
-
     mkn
     MKN_REPO=$(mkn -G MKN_REPO)
     rm -rf build && mkdir build && cd build
@@ -12,6 +11,6 @@ CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" && cd $CWD
                    -DEigen3_DIR="${MKN_REPO}/math/eigen/master/share/eigen3/cmake" \
                    -DBoost_DIR="${MKN_REPO}/org/boost/master/lib/cmake/Boost-1.86.0" \
                    -DFLANN_ROOT="${MKN_REPO}/math/flann/master" \
-                   -DCMAKE_INSTALL_PREFIX=$PWD ../p
+                   -DCMAKE_INSTALL_PREFIX=$CWD ../p
     ninja && ninja install
 )

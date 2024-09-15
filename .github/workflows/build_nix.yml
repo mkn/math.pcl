@@ -30,5 +30,4 @@ jobs:
         sudo apt install g++ mesa-utils libglu1-mesa-dev freeglut3 freeglut3-dev mesa-common-dev
         sudo apt-get install libglew-dev libglfw3-dev libglm-dev libglx-dev
         curl -Lo mkn https://github.com/mkn/mkn/releases/download/latest/mkn_nix
-        chmod +x mkn
-        PATH="$PWD:$PATH" ./mkn.sh
+        chmod +x mkn && PATH="$PWD:$PATH" ./mkn.sh

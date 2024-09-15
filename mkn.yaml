@@ -1,36 +1,10 @@
 
-
 name: libpcl
-parent: eigen
+parent: base
 
 profile:
 - name: base
-  dep: org.boost
+  inc: include
+  path: lib
+  dep: org.boost math.eigen
   sub: pcl&p(https://github.com/PointCloudLibrary/pcl)
-
-
-- name: eigen
-  parent: base
-  dep: math.eigen
-
-- name: common
-  inc: p/common/include
-  src: p/common/src
-  lang: cpp
-
-- name: filters
-  inc: p/filters/include
-  src: p/filters/src
-- name: features
-  inc: p/features/include
-  src: p/features/src
-- name: segmentation
-  inc: p/segmentation/include
-  src: p/segmentation/src
-- name: search
-  inc: p/search/include
-  src: p/search/src
-- name: kdtree
-  inc: p/kdtree/include
-  src: p/kdtree/src
-
